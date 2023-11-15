@@ -18,14 +18,11 @@ enum SessionState {
         case .idle:
             return 0
         case .work:
-            return 2 * 60
-//            return 25 * 60
+            return 25 * 60
         case .shortBreak:
-            return 1 * 30
-//            return 5 * 60
+            return 5 * 60
         case .longBreak:
-            return 1 * 60
-//            return 10 * 60
+            return 10 * 60
         }
     }
 }
