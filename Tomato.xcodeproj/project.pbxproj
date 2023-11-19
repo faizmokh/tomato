@@ -50,6 +50,7 @@
 		4A6842BE2AFA25C60055890D /* TomatoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoUITests.swift; sourceTree = "<group>"; };
 		4A6842C02AFA25C60055890D /* TomatoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4A6842CE2AFA2D2B0055890D /* PomodoroWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroWorker.swift; sourceTree = "<group>"; };
+		4A8069102B05089800FDD683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4A92D4F92AFB7438000CAE9F /* SessionStateWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStateWorker.swift; sourceTree = "<group>"; };
 		4A92D4FC2AFB7480000CAE9F /* SessionStateWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStateWorkerTests.swift; sourceTree = "<group>"; };
 		4A92D4FE2AFB7F1D000CAE9F /* SessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionState.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		4A6842A12AFA25C40055890D /* Tomato */ = {
 			isa = PBXGroup;
 			children = (
+				4A8069102B05089800FDD683 /* Info.plist */,
 				4A6842CD2AFA2D140055890D /* Pomodoro */,
 				4A6842A22AFA25C40055890D /* TomatoApp.swift */,
 				4A6842A62AFA25C60055890D /* Assets.xcassets */,
@@ -460,6 +462,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tomato/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -487,6 +490,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tomato/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

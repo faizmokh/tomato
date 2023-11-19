@@ -58,7 +58,10 @@ struct TomatoApp: App {
             }
             Divider()
             Button("About") {
-                
+                showAboutPanel()
+            }
+            Button(isAppIconInDockShown ? "Hide dock icon" : "Show dock icon") {
+                toggleDockVisibility()
             }
             Button("Quit") {
                 NSApplication.shared.terminate(self)
@@ -72,5 +75,36 @@ struct TomatoApp: App {
             }
             .monospacedDigit()
         }
+    }
+}
+
+extension TomatoApp {
+    private func showAboutPanel() {
+        NSApplication.shared.orderFrontStandardAboutPanel(options: [
+            NSApplication.AboutPanelOptionKey.applicationName: Bundle.main.displayName,
+            NSApplication.AboutPanelOptionKey.version: "1.0.0",
+            NSApplication.AboutPanelOptionKey.credits: NSAttributedString(
+                string: "Yet another pomodoro timer"
+            ),
+            NSApplication.AboutPanelOptionKey(
+                rawValue: "Copyright"
+            ): "© 2023 FAIZ MOKHTAR"
+        ])
+        NSApplication.shared.windows.first?.orderFrontRegardless()
+    }
+    
+    private var isAppIconInDockShown: Bool {
+        return NSApplication.shared.activationPolicy() == .regular
+    }
+    
+    private func toggleDockVisibility() {
+        let isDockShown = NSApplication.shared.activationPolicy() == .regular        
+        NSApplication.shared.setActivationPolicy(isDockShown ? .accessory : .regular)
+    }
+}
+
+extension Bundle {
+    var displayName: String {
+        return Bundle.main.infoDictionary?["CFBundleName"] as! String
     }
 }
